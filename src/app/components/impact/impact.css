@@ -1,0 +1,180 @@
+.impact { background: var(--white); }
+
+/* Stats band */
+.stats-band {
+  background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 50%, #1565C0 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+.stats-band::before {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  background: rgba(255,255,255,.05);
+  border-radius: 50%;
+  top: -200px; right: -200px;
+}
+
+.band-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-label.light {
+  background: rgba(255,255,255,.2);
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,.3);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: rgba(255,255,255,.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  text-align: center;
+  transition: var(--transition);
+}
+.stat-card:hover {
+  background: rgba(255,255,255,.18);
+  transform: translateY(-4px);
+}
+
+.stat-emoji   { font-size: 2rem; display: block; margin-bottom: 12px; }
+.stat-value   {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 6px;
+  animation: count-up .5s ease;
+}
+.stat-label   {
+  display: block;
+  font-weight: 600;
+  font-size: .9rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 8px;
+}
+.stat-desc    {
+  font-size: .82rem;
+  color: rgba(255,255,255,.7);
+  line-height: 1.5;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 100px 0;
+  background: var(--bg-light);
+}
+.test-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.test-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  border: 1px solid var(--border);
+  position: relative;
+  transition: var(--transition);
+}
+.test-card:hover {
+  border-color: var(--green-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.quote-mark {
+  font-family: var(--font-head);
+  font-size: 5rem;
+  color: var(--green-pale);
+  line-height: .6;
+  margin-bottom: 16px;
+  font-weight: 900;
+}
+.test-quote {
+  font-size: .95rem;
+  color: var(--text);
+  line-height: 1.75;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+.test-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.author-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green), var(--green-light));
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.test-author strong {
+  display: block;
+  font-size: .9rem;
+  color: var(--dark);
+}
+.test-author span {
+  font-size: .8rem;
+  color: var(--text-muted);
+}
+
+/* Colombia banner */
+.colombia-banner {
+  position: relative;
+  overflow: hidden;
+  background: var(--dark);
+  padding: 64px 0;
+}
+.flag-stripe {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 33.33%;
+}
+.s1 { left: 0;      background: #F9C500; opacity: .15; }
+.s2 { left: 33.33%; background: #003087; opacity: .15; }
+.s3 { left: 66.66%; background: #C8102E; opacity: .15; }
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--white);
+}
+.banner-content h3 {
+  font-family: var(--font-head);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.banner-content p {
+  font-size: 1rem;
+  color: rgba(255,255,255,.75);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}

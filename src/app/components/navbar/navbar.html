@@ -1,0 +1,55 @@
+<nav class="navbar" [class.scrolled]="scrolled()">
+  <div class="container nav-inner">
+
+    <!-- Logo -->
+    <a class="logo" (click)="scrollTo('#inicio')">
+      <div class="logo-icon">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" fill="#2E7D32"/>
+          <path d="M20 32 C20 32 10 24 10 17 C10 12 14.5 8 20 8 C25.5 8 30 12 30 17 C30 24 20 32 20 32Z" fill="#66BB6A"/>
+          <path d="M20 8 L20 26" stroke="#1B5E20" stroke-width="1.5" stroke-dasharray="2 2"/>
+          <circle cx="15" cy="15" r="3" fill="#A5D6A7"/>
+          <circle cx="25" cy="13" r="2.5" fill="#A5D6A7"/>
+          <circle cx="20" cy="10" r="2" fill="#C8E6C9"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-main">Sembrando Sueños</span>
+        <span class="logo-sub">Fundación</span>
+      </div>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links">
+      @for (link of links; track link.href) {
+        <li>
+          <a (click)="scrollTo(link.href)" class="nav-link">{{ link.label }}</a>
+        </li>
+      }
+    </ul>
+
+    <!-- CTA -->
+    <a class="btn btn-primary nav-cta" (click)="scrollTo('#contacto')">
+      Únete
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+
+    <!-- Hamburger -->
+    <button class="hamburger" (click)="toggleMenu()" [class.open]="menuOpen()">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" [class.open]="menuOpen()">
+    <ul>
+      @for (link of links; track link.href) {
+        <li><a (click)="scrollTo(link.href)" class="mobile-link">{{ link.label }}</a></li>
+      }
+    </ul>
+    <a class="btn btn-primary" (click)="scrollTo('#contacto')" style="margin-top:16px">Únete a la causa</a>
+  </div>
+</nav>

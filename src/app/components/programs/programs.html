@@ -1,0 +1,31 @@
+<section class="programs" id="programas">
+  <div class="container">
+
+    <div class="programs-header reveal" #reveal>
+      <span class="section-label">Lo que hacemos</span>
+      <h2 class="section-title">Programas que <span>transforman</span> vidas</h2>
+      <p class="section-desc">
+        Cada programa nació escuchando las necesidades reales de las comunidades. Trabajamos de manera integral para que la transformación sea profunda y duradera.
+      </p>
+    </div>
+
+    <div class="programs-grid">
+      @for (p of programs; track p.title) {
+        <div class="program-card reveal" #reveal [style.--card-bg]="p.color" [style.--card-accent]="p.accent">
+          <div class="card-header">
+            <span class="prog-emoji">{{ p.emoji }}</span>
+            <div class="card-accent-bar"></div>
+          </div>
+          <h3>{{ p.title }}</h3>
+          <p>{{ p.desc }}</p>
+          <div class="tags">
+            @for (tag of p.tags; track tag) {
+              <span class="tag">{{ tag }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

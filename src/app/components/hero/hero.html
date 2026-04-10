@@ -1,0 +1,103 @@
+<section class="hero" id="inicio">
+  <!-- Fondo decorativo -->
+  <div class="hero-bg">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+    <div class="wave-bottom">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,60 C360,120 720,0 1080,80 C1260,120 1380,40 1440,60 L1440,120 L0,120 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="container hero-content">
+    <!-- Badge -->
+    <div class="hero-badge animate-fade-up" style="animation-delay:.1s">
+      <span class="badge-dot"></span>
+      Raíces de Paz Colombia
+    </div>
+
+    <!-- Headline -->
+    <h1 class="hero-title animate-fade-up" style="animation-delay:.25s">
+      Sembramos<br>
+      <span>Sueños</span>,<br>
+      construimos paz
+    </h1>
+
+    <!-- Subtítulo -->
+    <p class="hero-desc animate-fade-up" style="animation-delay:.4s">
+      Acompañamos a víctimas del conflicto armado en Colombia con programas de atención psicosocial, reconciliación comunitaria y reconstrucción del tejido social.
+    </p>
+
+    <!-- CTAs -->
+    <div class="hero-actions animate-fade-up" style="animation-delay:.55s">
+      <button class="btn btn-gold" (click)="scrollTo('#programas')">
+        Conoce nuestros programas
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+      <button class="btn btn-outline" (click)="scrollTo('#nosotros')">
+        Nuestra historia
+      </button>
+    </div>
+
+    <!-- Stats inline -->
+    <div class="hero-stats animate-fade-up" style="animation-delay:.7s">
+      <div class="stat">
+        <strong>+2.500</strong>
+        <span>Beneficiarios</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <strong>+45</strong>
+        <span>Municipios</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <strong>+8 años</strong>
+        <span>De trabajo</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Illustration / float card -->
+  <div class="hero-card animate-fade-in" style="animation-delay:.5s">
+    <div class="card-inner">
+      <!-- Árbol SVG -->
+      <div class="tree-art">
+        <svg viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Tierra -->
+          <ellipse cx="100" cy="200" rx="70" ry="12" fill="#A5D6A7" opacity=".4"/>
+          <!-- Tronco -->
+          <rect x="93" y="140" width="14" height="60" rx="7" fill="#6D4C41"/>
+          <!-- Copa grande -->
+          <circle cx="100" cy="110" r="60" fill="#2E7D32" opacity=".9"/>
+          <circle cx="70"  cy="120" r="38" fill="#388E3C"/>
+          <circle cx="130" cy="120" r="38" fill="#388E3C"/>
+          <circle cx="100" cy="80"  r="45" fill="#43A047"/>
+          <circle cx="100" cy="60"  r="32" fill="#66BB6A"/>
+          <circle cx="100" cy="45"  r="20" fill="#81C784"/>
+          <!-- Manos / personas bajo el árbol -->
+          <circle cx="72"  cy="185" r="8"  fill="#FFCC80"/>
+          <circle cx="100" cy="185" r="8"  fill="#A1887F"/>
+          <circle cx="128" cy="185" r="8"  fill="#80CBC4"/>
+          <!-- Estrellitas -->
+          <circle cx="55"  cy="50"  r="3" fill="#F9A825" opacity=".8"/>
+          <circle cx="148" cy="40"  r="2" fill="#F9A825" opacity=".6"/>
+          <circle cx="40"  cy="90"  r="2" fill="#F9A825" opacity=".5"/>
+          <circle cx="160" cy="100" r="3" fill="#F9A825" opacity=".7"/>
+        </svg>
+      </div>
+      <p class="card-quote">"La paz se siembra en el corazón de las comunidades"</p>
+      <span class="card-author">— Juan Martínez, Fundador</span>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-hint">
+    <div class="scroll-dot"></div>
+    <span>Descubre más</span>
+  </div>
+</section>
